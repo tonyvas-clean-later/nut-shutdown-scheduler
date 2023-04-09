@@ -141,7 +141,7 @@ def get_scheduled_shutdown_time():
 def shutdown():
     try:
         # Run shutdown command
-        proc = run(['echo', 'shutdown', '0'], stdout=PIPE, stderr=PIPE)
+        proc = run(['shutdown', '0'], stdout=PIPE, stderr=PIPE)
         # Check for success
         if proc.returncode != 0:
             stderr = proc.stderr.decode('utf-8')
